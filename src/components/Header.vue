@@ -41,7 +41,7 @@
 
 <script>
 export default {
-    name: "Haeder",
+    name: "Header",//"Haeder", //nome scritto male
     props: {
         genres: Array,
         authors: Array,

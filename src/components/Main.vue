@@ -46,15 +46,15 @@ export default {
         axios
             .get("https://flynn.boolean.careers/exercises/api/array/music")
             .then((res) => {
-                let discs = {};
+                // let discs = {};
                 this.discs = res.data.response;
-
+                console.log(this.discs);
                 this.discs.forEach((disc) => {
-                    if (!this.discs.includes(disc.genre)) {
+                    if (!this.genres.includes(disc.genre)) { //era utilizzato l'array discs, serve l'array genres 
                         this.genres.push(disc.genre);
                     }
 
-                    if (!this.authors.includes(discs.author)) {
+                    if (!this.authors.includes(disc.author)) { //veniva passato discs.author, serve disc.author
                         this.authors.push(disc.author);
                     }
                 });
